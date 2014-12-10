@@ -1,0 +1,2666 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+  
+    <title>Fellowship Feed</title>
+          
+    <!--Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles-600.css" media="only screen and (min-width:600px) and (max-width:804px)">
+    <link rel="stylesheet" type="text/css" href="css/styles-599.css" media="only screen and (max-width:599px)">    
+   
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/tipped.css" />
+	<link rel="stylesheet" type="text/css" href="css/classysocial.css" />
+ 
+ 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+  
+    <!--jQuery-->
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+  	<script type="text/javascript" src="scripts/modernizr.custom.js"></script>
+  	<script type="text/javascript" src="scripts/classie.js"></script>
+  	<script type="text/javascript" src="scripts/jquery.tipped.js"></script>
+  	<script type="text/javascript" src="scripts/excanvas.js"></script>
+	<script type="text/javascript" src="scripts/classysocial.js"></script> 
+  <script type="text/javascript" src="scripts/jquery.isotope.min.js"></script>
+ 	<script type="text/javascript" src="scripts/custom.js"></script>
+
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+      Tipped.create('#new-post', $('#new-post-tooltip')[0],
+    {
+    skin: 'white',
+    closeButtonSkin: 'light',
+    hook: 'topleft',
+    hideOn: 'click',
+    hideOn: 'click-outside',
+    hideOthers: true,
+    border: { size: 6, color: '#6A6A5F', opacity: 1 },
+    closeButton: false,
+    showOn: 'click',
+    stem: false,
+    target: $('#menu-new')[0],
+    shadow: { blur: 0, color: '#5E5E57', offset: { x: 0, y: 4 },  opacity: .1},
+    });
+
+   // Church Level
+    Tipped.create('#church-level', $('#church-level-tooltip')[0],
+          {
+    skin: 'white',
+    closeButtonSkin: 'light',
+    hook: 'topleft',
+    hideOn: 'click',
+    hideOn: 'click-outside',
+    hideOthers: true,
+    border: { size: 6, color: '#6A6A5F', opacity: 1 },
+    closeButton: false,
+    showOn: 'click',
+    stem: false,
+    target: $('#menu-church')[0],
+    shadow: { blur: 0, color: '#5E5E57', offset: { x: 0, y: 4 },  opacity: .1},
+    });
+
+    // Notifications
+    Tipped.create('#notifications', $('#notifications-tooltip')[0],
+    {
+    skin: 'white',
+    closeButtonSkin: 'light',
+    hook: 'topright',
+    hideOn: 'click',
+    hideOn: 'click-outside',
+    hideOthers: true,
+    border: { size: 6, color: '#6A6A5F', opacity: 1 },
+    closeButton: false,
+    showOn: 'click',
+    stem: false,
+    target: $('#menu-notifications')[0],
+    shadow: { blur: 0, color: '#5E5E57', offset: { x: 0, y: 4 },  opacity: .1},
+    });
+
+    // Search Tooltip
+    Tipped.create('#search', $('#search-tooltip')[0],
+    {
+    skin: 'white',
+    closeButtonSkin: 'light',
+    hook: 'topright',
+    hideOn: 'click',
+    hideOn: 'click-outside',
+    hideOthers: true,
+    border: { size: 6, color: '#6A6A5F', opacity: 1 },
+    showOn: 'click',
+    stem: false,
+    target: $('#menu-search')[0],
+    shadow: { blur: 0, color: '#5E5E57', offset: { x: 0, y: 4 },  opacity: .1},
+    });
+
+});
+</script>
+
+
+</head>
+<body class="cbp-spmenu-push">
+
+
+    <!--Fixed Navigation--> 
+
+ <div class="header-wpr">
+
+		<ul>
+			<span id="new-post"><a title="Create a New Post" href="#"><li id="menu-new">New</li></a></span>
+			<span id="church-level"><a href="#" title="Select Church Level"><li id="menu-church">Church</li></a></span>
+			<a href="#" data-filter="*" class="selected"><li id="menu-all">ALL</li><div id="all-bar"></div></a>
+			<a href="#" data-filter=".need-sort"><li id="menu-needs">NEEDS</li><div id="need-bar"></div></a>
+			<a href="#" data-filter=".prayer-sort"><li id="menu-prayer">PRAYER</li><div id="prayer-bar"></div></a>
+			<a href="#" data-filter=".fellowship-sort"><li id="menu-fellowship">FELLOWSHIP</li><div id="fellowship-bar"></div></a>
+			<a href="#" data-filter=".give-sort"><li id="menu-give">GIVE</li><div id="give-bar"></div></a>
+			<a href="#" data-filter=".grow-sort"><li id="menu-grow">GROW</li><div id="grow-bar"></div></a>
+      <a href="#" data-filter=".go-sort"><li id="menu-go">GO</li><div id="go-bar"></div></a>
+			<span id="notifications"><a href="#" title="Notifications"><li id="menu-notifications"><div id="notifications-icon"><div id="notifications-number">4</div></div></li></a></span>
+			<span id="search"><a href="#" title="Search"><li id="menu-search"><div id="search-icon"></div></li></a></span>
+			<li id="menu-settings">
+				<button id="showRightPush" title="Settings">
+				</button>
+			</li> 
+		</ul>
+	<span class="shadow">
+	</span>
+ </div>
+  
+
+    <!--Fixed Navigation for responsive < 600px --> 
+
+
+ <div class="header-wpr-804 menu-all-selected">
+
+		<ul>
+            <select id = "mobiledd" class="ddmenu selected">
+              <option value = ".all-sort">ALL</option>
+              <option value = ".needs-sort">NEEDS</option>
+              <option value = ".prayer-sort">PRAYER</option>
+              <option value = ".fellowship-sort">FELOWSHIP</option>
+              <option value = ".give-sort">GIVE</option>
+              <option value = ".grow-sort">GROW</option>
+              <option value = ".go-sort">GO</option>
+            </select>
+
+			<span id="new-post"><a title="Create a New Post" href="#"><li id="menu-new">New</li></a></span>
+			<span id="church-level"><a href="#" title="Select Church Level"><li id="menu-church">Caleb & Naomi's House Fellowship</li></a></span>
+
+			<span id="notifications"><a href="#" title="Notifications"><li id="menu-notifications"><div id="notifications-icon"><div id="notifications-number">4</div></div></li></a></span>
+			<span id="search"><a href="#" title="Search"><li id="menu-search"><div id="search-icon"></div></li></a></span>
+			<li id="menu-settings">
+				<button id="showRightPush" title="Settings">
+				</button>
+			</li>
+		</ul>
+	<span class="shadow">
+	</span>
+ </div>
+
+
+    <!--Fixed Navigation for responsive < MOBILE --> 
+
+
+
+ <div class="header-wpr-599 menu-all-selected">
+
+		<ul>
+
+            <select id = "mobiledd" class="ddmenu selected">
+              <option value = ".all-sort">ALL</option>
+              <option value = ".needs-sort">NEEDS</option>
+              <option value = ".prayer-sort">PRAYER</option>
+              <option value = ".fellowship-sort">FELOWSHIP</option>
+              <option value = ".give-sort">GIVE</option>
+              <option value = ".grow-sort">GROW</option>
+              <option value = ".go-sort">GO</option>
+            </select>
+
+			<span id="notifications"><a href="#" title="Notifications"><li id="menu-notifications"><div id="notifications-icon"><div id="notifications-number">4</div></div></li></a></span>
+			<span id="search"><a href="#" title="Search"><li id="menu-search"><div id="search-icon"></div></li></a></span>
+			<li id="menu-settings">
+				<button id="showRightPush" title="Settings">
+				</button>
+			</li>
+		</ul>
+	<span class="shadow">
+	</span>
+ </div>
+
+
+
+
+
+    <!--Side Settings Navigation--> 
+
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+    <h3>Settings<a href="#" class="close"><span></span></a></h3>
+    <a href="#">Preferences</a>
+    <a href="#">My Account</a>
+    <a href="#">Password</a>
+    <a href="#">Contact Me Via ...</a>
+    <a href="#">Sign Out</a>
+</nav>
+
+
+
+    <!--New Post Tooltip-->
+	 
+<div id="new-post-tooltip" style="display:none"><img src="images/new-fake-dd.jpg"></div>
+    
+
+
+    <!--Church Level Tooltip-->
+
+<div id="church-level-tooltip" style="display:none"><img src="images/church-level-fake-dd.jpg"></div>
+    
+
+
+
+
+    <!--Notifications Tooltip-->
+
+<div id="notifications-tooltip" style="display:none"><img src="images/notifications-fake-dd.jpg"></div>
+    
+
+
+    <!--Search Tooltip-->
+
+<div id="search-tooltip" style="display:none"><img src="images/search-fake-dd.jpg"></div>
+
+
+
+
+<div id="content-tile-wpr" class="isotope sort">
+
+
+  <!--Content Tiles-->
+
+	<div class="tile-wpr need need-sort isotope-item">
+			<div class="author">
+				<span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/willy.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+				<span>Willy V.</span> 
+			</div>
+		
+
+    <!--Avatar Contact Icons-->
+
+      <script>
+      $(document).ready(function() {
+      $(".classysocial").each(function() {
+      new ClassySocial(this);
+      });
+      });
+      </script>
+
+		<div class="type-bar">
+		<div class="content">
+			<div class="type">
+			</div>
+			<span>
+				My wife and I are moving this weekend.  We could really use a hand packing and moving boxes.  If anyone has a truck, that would also be very helpful.
+			</span>
+			<div class="time-stamp">
+				<div class="time">just now</div><div class="flag"><a href="#">Flag</a></div>
+			</div>
+		</div>
+			<div class="comments">
+				<input type="text" rows="1" placeholder="Reply to Need ...">
+				</input>
+			</div>
+		</div>
+	</div> 
+	  
+	
+
+	<div class="tile-wpr prayer prayer-sort isotope-item">
+			<div class="author">
+				<span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/addison.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+				<span>Addison D.</span> 
+			</div>
+		<div class="type-bar">
+		<div class="content">
+			<div class="type">
+			</div>
+			<span>
+				Pray for my neighbor.  They are going through some tough family situations.  Pray that God will use us to reach out to them in love.
+			</span>
+			<div class="time-stamp">
+				<div class="time">5 min</div><div class="flag"><a href="#">Flag</a></div>
+			</div>
+		</div>
+			<div class="comments">
+				<ul>
+				</ul>
+				<input type="text" rows="1" placeholder="Reply to Prayer ...">
+				</input>
+			</div>
+		</div>
+	</div> 
+
+
+	<div class="tile-wpr give give-sort isotope-item">
+			<div class="author">
+				<span class="avatar classysocial" data-networks="twitter" data-twitter-handle="picozu_editor" data-picture="images/users/tyler.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+				<span>Tyler F.</span> 
+			</div>
+		<div class="type-bar">
+		<div class="content">
+			<div class="type">
+			</div>
+			<span>
+        <img src="images/photos/bike.jpg">
+        <br/>
+				I just received 2 used bikes this week!  We’ve already got bikes for ourselves, please take these off our hands.  I’ll even help transport them.  See the pictures attached.
+						</span>
+			<div class="time-stamp">
+				<div class="time">27 min</div><div class="flag"><a href="#">Flag</a></div>
+			</div>
+		</div>
+			<div class="comments">
+				<ul>
+					<li>
+						<div class="comment-pic faso"></div>
+						<span>Michael L.</span>
+						<br/>
+						I am extremely interested in these. How are the tires?  Do they need replacing? 
+					</li>
+					<li>
+						<div class="comment-pic default"></div>
+						<span>Andrei B.</span>
+						<br/>
+						Have you asked Ben about this?  I know he was looking for a bike last week.
+					</li>
+				</ul>
+				<input type="text" rows="1" placeholder="Reply to Give ...">
+				</input>
+			</div>
+		</div>
+	</div> 
+				
+
+	<div class="tile-wpr grow grow-sort isotope-item">
+			<div class="author">
+				<span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/naomi.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+				<span>Naomi A.</span> 
+		</div>
+		<div class="type-bar">
+		<div class="content">
+			<div class="type">
+			</div>
+			<span>
+				Here is an excellent collection of sermons based on the Fundamentals of the Faith. <a href="http://www.gty.org/FOF" target="blank">http://www.gty.org/FOF</a>
+			</span>
+			<div class="time-stamp">
+				<div class="time">45 min</div><div class="flag"><a href="#">Flag</a></div>
+			</div>
+		</div>
+			<div class="comments">
+				<ul>
+					<li>
+						<div class="comment-pic simon"></div>
+						<span>Simon B.</span>
+						<br/>
+						Thanks for sharing this!  Just what I was looking for today!  
+					</li>
+          <li>
+            <div class="comment-pic kate"></div>
+            <span>Kate W.</span>
+            <br/>
+            Thanks! I really enjoy "Grace to You" resources.
+          </li>
+				</ul>
+				<input type="text" rows="1" placeholder="Reply to Grow ...">
+				</input>
+			</div>
+		</div>
+	</div> 
+
+
+
+
+
+
+	<div class="tile-wpr fellowship fellowship-sort isotope-item">
+		<div class="author">
+			<span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/jared.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+			<span>Jared C.</span> 
+		</div>
+		<div class="type-bar">
+		<div class="content">
+			<div class="type">
+			</div>
+			<span>
+				Hey guys, we are planning a BBQ this sunday around 1:30. Bring your game face!  we will be playing volleyball. Call me for any more details.  CYA there!
+			</span>
+			<div class="time-stamp">
+				<div class="time">1 hour</div><div class="flag"><a href="#">Flag</a></div>
+			</div>
+		</div>
+			<div class="comments">
+				<ul>
+					<li>
+						<div class="comment-pic stassja"></div>
+						<span>Stassja C.</span>
+						<br/>
+						Sounds like fun! I'm in!
+					</li>
+					<li>
+						<div class="comment-pic dave"></div>
+						<span>Dave M.</span>
+						<br/>
+						I can't make it.  I have softball practice until 7.
+					</li>
+					<li>
+						<div class="comment-pic sten"></div>
+						<span>Sten D.</span>
+						<br/>
+						Is there anything we can bring?  Volleyball net?
+					</li>
+				</ul>
+				<input type="text" rows="1" placeholder="Reply to Fellowship ...">
+				</input>
+			</div>
+		</div>
+	</div> 
+  
+
+
+  <div class="tile-wpr prayer prayer-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/crystal.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Crystal Y.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Please pray for my grandfather.  He’s in the hospital for the 3rd time this week.  He is having problems with his diabetes.
+      </span>
+      <div class="time-stamp">
+        <div class="time">1 hour</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic tyler"></div>
+            <span>Tyler F.</span>
+            <br/>
+            I'll be praying for him. Is this the same reason he was in the hospital the last week? 
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Prayer ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+ <div class="tile-wpr go go-sort isotope-item">
+    <div class="author">
+      <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/chris.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+      <span>Chris W.</span> 
+    </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/paintball.jpg">
+        <br/>
+        Paintball ministry outing on the 21st.  Bring a friend you've been trying to reach out to!  Guys & Girls cost is $30. #Paint #Gospel #Fun
+      </span>
+      <div class="time-stamp">
+        <div class="time">2 hours</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic ben"></div>
+            <span>Ben H.</span>
+            <br/>
+            WOW, this sounds awesome!  I'm coming, and I'll probably bring 2 friends I have in mind.
+          </li>
+          <li>
+            <div class="comment-pic jay"></div>
+            <span>Jay J.</span>
+            <br/>
+            Is there an age limit? Can I bring my younger brother?
+          </li>
+          <li>
+            <div class="comment-pic cisco"></div>
+            <span>Cisco V.</span>
+            <br/>
+            What time?  Is this an all-day thing?  I have work until 2:30.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder=" Reply to Go ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+ <div class="tile-wpr fellowship fellowship-sort isotope-item">
+    <div class="author">
+      <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/austin.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+      <span>Austin S.</span> 
+    </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Youth bowling night this thursday 8pm at Manatee Lanes.  Ages 8-18 parents welcome.  We need two more chaperones to volunteer.
+      </span>
+      <div class="time-stamp">
+        <div class="time">3 hours</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic willy"></div>
+            <span>Willy V.</span>
+            <br/>
+            I can chaperone!  I love bowling... and those funny shoes
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder=" Reply to Fellowship ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+  
+
+  
+
+  <div class="tile-wpr go go-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/ken.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Ken B.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        God has moved me to start looking to disciple someone.  I can meet in the evenings from 7-11pm.  Let me know if you, are someone you know, is interested in being discipled!  thanks!
+      </span>
+      <div class="time-stamp">
+        <div class="time">3 hours</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Go ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+    <div class="tile-wpr prayer prayer-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/stassja.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Stassja C.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        BIG PRAISE, we are pregnant!  Pray for a healthy pregnancy.  We will keep you posted on further developements.
+      </span>
+      <div class="time-stamp">
+        <div class="time">5 hours</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic ben"></div>
+            <span>Ben H.</span>
+            <br/>
+            CONGRATULATIONS !!!
+          </li>
+          <li>
+            <div class="comment-pic jake"></div>
+            <span>Jake D.</span>
+            <br/>
+            Welcome to the club.  We are so happy for you guys!
+          </li>
+          <li>
+            <div class="comment-pic sten"></div>
+            <span>Sten D.</span>
+            <br/>
+            WOW!!! Congrats!  You are going to be such great parents.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Prayer ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+<div class="tile-wpr grow grow-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/chris.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Chris W.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/explicit.png">
+        <br/>
+        The church just got a new DVD series called "The Explicit Gospel" by Matt Chandler.  If you're small group could benefit from this, let Josh know and we can get it to you! <a href="http://vimeo.com/38033040">http://vimeo.com/38033040</a>
+      </span>
+      <div class="time-stamp">
+        <div class="time">4 hours</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic tyler"></div>
+            <span>Tyler F.</span>
+            <br/>
+            That sounds interesting.  We are almost ready for our next study material. I'll definitely have to take a look at that.
+          </li>
+          <li>
+            <div class="comment-pic faso"></div>
+            <span>Michael L.</span>
+            <br/>
+            Matt Chandler is the man!
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Grow ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+<div class="tile-wpr give give-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter" data-twitter-handle="picozu_editor" data-picture="images/users/anthony.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Anthony J.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        I’ve got two free tickets to a Miami Heat Game!! I have to work so I won’t be able to use them.  Call me ASAP!
+            </span>
+      <div class="time-stamp">
+        <div class="time">6 hours</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic melissa"></div>
+            <span>Melissa V.</span>
+            <br/>
+            I am going to call you as soon as I get off work!
+          </li>
+          <li>
+            <div class="comment-pic matt"></div>
+            <span>Matt V.</span>
+            <br/>
+            Thanks for such an awesome offer!!  I'm out of town though...
+          </li>
+          <li>
+            <div class="comment-pic luis"></div>
+            <span>Luis P.</span>
+            <br/>
+            Yes please!  I'm calling you.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Give ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+  <div class="tile-wpr need need-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/india.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>India L.</span> 
+      </div>
+    
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Babysitter needed.  I’m trying to go to night school and I’m going to need a steady babysitter.  I don't have much to pay, I was hoping someone would like to help me out.  Thanks!
+      </span>
+      <div class="time-stamp">
+        <div class="time">yesterday</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic elaine"></div>
+            <span>Elaine B.</span>
+            <br/>
+            I might be available Mondays, Weds, and Fri evenings.  I have to make sure I'll have a ride though.  I'll keep you posted. 
+          </li>
+          <li>
+            <div class="comment-pic crystal"></div>
+            <span>Crystal Y.</span>
+            <br/>
+            Where do you live?  Do you live close Palm Beach Gardens?
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Need ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+  <div class="tile-wpr grow grow-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/faso.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Michael L.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Sermon series on Spiritual Simplicity.  Really helped me out a bunch. <a href="http://livingontheedge.org/series/spiritual-simplicity/daily-radio" target="blank">http://livingontheedge.org/series/spiritual-simplicity/daily-radio</a>
+      </span>
+      <div class="time-stamp">
+        <div class="time">yesterday</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic melissa"></div>
+            <span>Melissa V.</span>
+            <br/>
+            I checked this out.  Very interesting.  Thanks for sharing this link.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Grow ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+  <div class="tile-wpr need need-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/faso.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Michael L.</span> 
+      </div>
+    
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        I’ve been out of work for 2 months now. Does anyone have any openings or leads?  I’m qualified for landscaping and I’m very good at common repair/handy work.
+      </span>
+      <div class="time-stamp">
+        <div class="time">yesterday</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+          <div class="comment-pic cisco"></div>
+            <span>Cisco V.</span>
+            <br/>
+            Send me your resume, I'll keep my eyes and ears open.
+          </li>
+          <li>
+            <div class="comment-pic austin"></div>
+            <span>Austin S.</span>
+            <br/>
+            I might have an idea.  Call me.
+          </li>
+          <li>
+            <div class="comment-pic kate"></div>
+            <span>Kate W.</span>
+            <br/>
+            Have you talked to Steven?  I think he's looking for help right now.  Might help in the meantime.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder=" Reply to Need ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+ <div class="tile-wpr fellowship fellowship-sort isotope-item">
+    <div class="author">
+      <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/ed.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+      <span>Edwin A.</span> 
+    </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/bacon.jpg">
+        <br/>
+        New Men's Breakfast this Wednesday.  Bible & Baccon 7AM.  Bring your Bible and notes, we will be meeting at the Diner on 8th st.
+      </span>
+      <div class="time-stamp">
+        <div class="time">yesterday</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic tyler"></div>
+            <span>Tyler F.</span>
+            <br/>
+            Mmmmmmm.... Baccon!
+          </li>
+          <li>
+            <div class="comment-pic ben"></div>
+            <span>Ben H.</span>
+            <br/>
+            So, will we be doing a study like the last time? Very excited to get some bro time!
+          </li>
+          <li>
+            <div class="comment-pic jake"></div>
+            <span>Jake D.</span>
+            <br/>
+            I love that diner!  Cya there!
+          </li>
+          <li>
+            <div class="comment-pic ken"></div>
+            <span>Ken B.</span>
+            <br/>
+            I am NOT a morning person... How about 7PM? haha
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder=" Reply to Fellowship ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+ <div class="tile-wpr prayer prayer-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/chris.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Chris W.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        I'm giving a big presentation today.  Please pray that everything would go well and I would keep my cool :)
+      </span>
+      <div class="time-stamp">
+        <div class="time">yesterday</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Prayer ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+<div class="tile-wpr give give-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter" data-twitter-handle="picozu_editor" data-picture="images/users/ken.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Ken B.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/basketball.jpg">
+        <br/>
+        Used basketball hoop.  Kids have moved out and we'd like to put this to good use!  Pictures attached.
+            </span>
+      <div class="time-stamp">
+        <div class="time">yesterday</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic jake"></div>
+            <span>Jake D.</span>
+            <br/>
+            This would be a great addition to the Jordans house!  They have three youth small groups meet throughout the week.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Give ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+
+  <div class="tile-wpr fellowship fellowship-sort isotope-item">
+    <div class="author">
+      <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/naomi.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+      <span>Naomi A.</span> 
+    </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        The girls study groups are going out for ice cream tonight. 8:00PM Cold Stone.  Map attached for directions.
+      </span>
+      <div class="time-stamp">
+        <div class="time">2 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic melissa"></div>
+            <span>Melissa V.</span>
+            <br/>
+            Wooohooo!!  Can anyone come?
+          </li>
+          <li>
+            <div class="comment-pic stassja"></div>
+            <span>Stassja C.</span>
+            <br/>
+            I LOVE COLDSTONE :)
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder=" Reply to Fellowship ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+  
+
+
+<div class="tile-wpr go go-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter" data-twitter-handle="picozu_editor" data-picture="images/users/austin.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Austin S.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Homeless Ministry is meeting this Thursday.  We are going to drive around and hand out sandwiches and build relationships with the usuals.  If you interested, contact Josh and we can get a carpool started.
+            </span>
+      <div class="time-stamp">
+        <div class="time">2 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic tyler"></div>
+            <span>Tyler F.</span>
+            <br/>
+            What areas are you going to reach out to?  Are you going to visit downtown? I'd love to join!
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Go ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+  <div class="tile-wpr give give-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter" data-twitter-handle="picozu_editor" data-picture="images/users/sten.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Sten D.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/shoes.jpg">
+        <br/>
+        I want to clean out my massive shoe collection.  I have 4 pairs to give away.  All pairs are in really good condition.  Pictures attached.
+            </span>
+      <div class="time-stamp">
+        <div class="time">3 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic melissa"></div>
+            <span>Melissa V.</span>
+            <br/>
+            Oooo... what size are those nikes?
+          </li>
+          <li>
+            <div class="comment-pic ben"></div>
+            <span>Ben H.</span>
+            <br/>
+            My friend from work is going on a missions trip and they are collecting clothes to bring.  Let me know what is left over, I'm sure we could put them to good use!
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Give ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+ <div class="tile-wpr prayer prayer-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/urbinati.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>David U.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        I’m studying for a big test and I could really use some prayer.  If I don’t pass this class, I will be stuck a whole extra semester.  It’s on the 1918 Turkish war of Independence for my humanities class.  It’s tough stuff. 
+      </span>
+      <div class="time-stamp">
+        <div class="time">2 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic cisco"></div>
+            <span>Cisco V.</span>
+            <br/>
+            I'm praying for you bro!
+          </li>
+          <li>
+            <div class="comment-pic ken"></div>
+            <span>Ken B.</span>
+            <br/>
+            I think you're going to ace that thing.  Love ya, praying for you.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Prayer ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+
+
+
+
+
+  <div class="tile-wpr need need-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/jake.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Jake D.</span> 
+      </div>
+    
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/car.jpg">
+        <br/>
+        My car broke down.  It’s going to take a week to fix.  Can someone bring me to work in the mornings?  My parents can pick me up in the evenings.
+      </span>
+      <div class="time-stamp">
+        <div class="time">2 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic caleb"></div>
+            <span>Dave M.</span>
+            <br/>
+            Let's Carpool!
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Need ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+<div class="tile-wpr give give-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter" data-twitter-handle="picozu_editor" data-picture="images/users/willy.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Willy V.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/guitar.jpg">
+        <br/>
+        Free guitar lessons.  I'll be having a lot of down time this summer and I'd love to try and guide someone with guitar or piano.
+            </span>
+      <div class="time-stamp">
+        <div class="time">3 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic kate"></div>
+            <span>Kate W.</span>
+            <br/>
+            Awesome!! thanks for sharing your gift.  Your show was so great last weekend.  So glad to finally come out and see you guys.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Give ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+  <div class="tile-wpr grow grow-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/matt.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Matt V.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        This is a great article to remind us why we get up early and seek the Lord! It is super encouraging.  <a href="http://www.desiringgod.org/blog/posts/five-promises-for-your-bible-reading-and-prayer" target="blank">http://www.desiringgod.org/blog/posts/five-promises-for-your-bible-reading-and-prayer</a>
+      </span>
+      <div class="time-stamp">
+        <div class="time">4 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic urbinati"></div>
+            <span>David U.</span>
+            <br/>
+            Good Stuff!  
+          </li>
+          <li>
+            <div class="comment-pic ben"></div>
+            <span>Ben H.</span>
+            <br/>
+            So true.  I have such a hard time getting up early, but I really want to work on this.  I'll give it a listen.
+          </li>
+          <li>
+            <div class="comment-pic india"></div>
+            <span>India L.</span>
+            <br/>
+            That was a good read.  I passed it on.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Grow ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+
+  <div class="tile-wpr fellowship fellowship-sort isotope-item">
+    <div class="author">
+      <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/luis.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+      <span>Luis P.</span> 
+    </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Who's up for basketball this Sunday after church?!  Palm Beach Park.  depending on how many people show up, we might get 2 games going.
+      </span>
+      <div class="time-stamp">
+        <div class="time">4 days ago</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic jay"></div>
+            <span>Jay J.</span>
+            <br/>
+            Bring your game-face dude.  I'm in.
+          </li>
+          <li>
+            <div class="comment-pic faso"></div>
+            <span>Michael L.</span>
+            <br/>
+            We are both coming.  It's been awhile...
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Fellowship ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+
+
+  <div class="tile-wpr prayer prayer-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/melissa.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Melissa V.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        I’m really looking for some direction from God right now.  I’ve got a couple options for the next season in my life, and I want to make the right decision. Pray that God would give me clarity and obedience.
+      </span>
+      <div class="time-stamp">
+        <div class="time">5 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic jared"></div>
+            <span>Jared C.</span>
+            <br/>
+            Did you get that new job you were talking about?
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Prayer ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+<div class="tile-wpr grow grow-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/jay.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Jay J.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        "Therefore encourage one another and build each other up, just as in fact you are doing." -1 Thessalonians 5:11
+      </span>
+      <div class="time-stamp">
+        <div class="time">5 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic stassja"></div>
+            <span>Stassja C.</span>
+            <br/>
+            I love this one! 
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Grow ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+ <div class="tile-wpr prayer prayer-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/tyler.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Tyler F.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Please Pray for my friend Jared.  He is a missionary to indigenous people groups and is hiking into the himalayas.  He is also needing financial support for this next year.  Here is a link to his twitter for more on what he is up to. <a href="http://bit.ly/13UQylr" target="blank">http://bit.ly/13UQylr</a>
+      </span>
+      <div class="time-stamp">
+        <div class="time">5 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic willy"></div>
+            <span>Willy V.</span>
+            <br/>
+            Whoa!  Interesting... I'll check it out
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Prayer ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+ <div class="tile-wpr prayer prayer-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/sten.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Sten D.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/apartment.jpg">
+        <br/>
+        I’ve got a praise!  I just found a really great apartment that is inside my price range and close to work.  I had been looking for 2 weeks now.  Hallelujah!
+      </span>
+      <div class="time-stamp">
+        <div class="time">5 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic austin"></div>
+            <span>Austin S.</span>
+            <br/>
+            Awesome!  You have to have us over right away!
+          </li>
+          <li>
+            <div class="comment-pic urbinati"></div>
+            <span>David U.</span>
+            <br/>
+            Do you need help moving?
+          </li>
+          <li>
+            <div class="comment-pic simon"></div>
+            <span>Simon B.</span>
+            <br/>
+            We can help you move.  And we've got the truck this week.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Prayer ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+  <div class="tile-wpr need need-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/default.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Ryan D.</span> 
+      </div>
+    
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        I’m in a tuff spot financially.  I had to pay for some unexpected medical costs, and now I can’t pay my usual bills this month.  If you can help me out in any way, I don’t want to miss my payments.
+      </span>
+      <div class="time-stamp">
+        <div class="time">6 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic matt"></div>
+            <span>Matt V.</span>
+            <br/>
+            God has really blessed us with extra, in this season.  We would love to help you guys out.  I'll give you a call.  
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Need ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+  <div class="tile-wpr need need-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/ed.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Edwin A.</span> 
+      </div>
+    
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        My son is looking to try out for football this season, but we don’t have enough money for new equipment.  Looking for cleats, shoulder pads, and pants.
+      </span>
+      <div class="time-stamp">
+        <div class="time">6 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic stassja"></div>
+            <span>Stassja C.</span>
+            <br/>
+            You should contact Coach Dave!
+          </li>
+          <li>
+            <div class="comment-pic matt"></div>
+            <span>Matt V.</span>
+            <br/>
+            How old is your son?  Football season already? WOW
+          </li>
+          <li>
+            <div class="comment-pic dakota"></div>
+            <span>Dakota M.</span>
+            <br/>
+            We are totally coming to one of his games!  Awesome!
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Need ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+  <div class="tile-wpr grow grow-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/india.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>India L.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        "By this everyone will know that you are my disciples, if you love one another." -John 13:35
+      </span>
+      <div class="time-stamp">
+        <div class="time">6 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Grow ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+  <div class="tile-wpr fellowship fellowship-sort isotope-item">
+    <div class="author">
+      <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/crystal.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+      <span>Crystal Y.</span> 
+    </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Boardgame night!  Our place, this Friday 8PM.  If you're coming, let us know.  We could use some help with snacks. You're welcome to bring some friends!
+      </span>
+      <div class="time-stamp">
+        <div class="time">6 days</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic urbinati"></div>
+            <span>David U.</span>
+            <br/>
+            What are we playing?  Should we bring Risk?
+          </li>
+          <li>
+            <div class="comment-pic india"></div>
+            <span>India H.</span>
+            <br/>
+            I can bring some cookies! We just made a bunch this afternoon.  And I'll bring my brothers.  They love game night.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Fellowship ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+<div class="tile-wpr go go-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/melissa.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Melissa V.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Some of us are going to Walmart late Saturday evening to do some evangelism.  Mostly talking to people outside, inside shopping, and chatting with the workers.  Asking them questions and building some new relationships.  We are going to start with prayer in the parking lot 11:00PM.  Let me know if you are interested!
+      </span>
+      <div class="time-stamp">
+        <div class="time">1 week</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic dave"></div>
+            <span>Dave M.</span>
+            <br/>
+            That sounds awesome!  I've never done that before. Count me in.
+          </li>
+          <li>
+            <div class="comment-pic dakota"></div>
+            <span>Dakota M.</span>
+            <br/>
+            Might as well get my shopping done too? haha
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Go ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+<div class="tile-wpr give give-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter" data-twitter-handle="picozu_editor" data-picture="images/users/india.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>India L.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Job opening available for full-time waiters and hostess.  Looking for extra summer help.
+            </span>
+      <div class="time-stamp">
+        <div class="time">1 week</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Give ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+  
+
+
+<div class="tile-wpr grow grow-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/urbinati.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>David U.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        I’m looking to get discipled.  I’m in a small group, but I’ve got a lot of tough questions.  I’d really like to get an elder’s look on them.
+      </span>
+      <div class="time-stamp">
+        <div class="time">1 week</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic ken"></div>
+            <span>Ken B.</span>
+            <br/>
+            That's great news because I'm looking for someone to disciple.  Let's chat this Saturday!
+          </li>
+          <li>
+            <div class="comment-pic tyler"></div>
+            <span>Tyler F.</span>
+            <br/>
+            You should contact the churches discipleship coordinator, Nancy.  561-5555
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Grow ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+<div class="tile-wpr grow grow-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/ben.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Ben H.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Have you ever studied the king Josiah from the Old Testament?  It’s fascinating the way this guy reacted when he first read the Bible. Check it out,  2 Kings 22 <a href="http://bg4.me/13URYMx" target="blank">http://bg4.me/13URYMx</a>
+      </span>
+      <div class="time-stamp">
+        <div class="time">1 week</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic crystal"></div>
+            <span>Crystal Y.</span>
+            <br/>
+            Thanks I'll check that out!
+          </li>
+          <li>
+            <div class="comment-pic ed"></div>
+            <span>Edwin A.</span>
+            <br/>
+            Ya, that's crazy how much he loved the newly discovered law.  Love that story.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Grow ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+   <div class="tile-wpr go go-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/matt.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Matt V.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Our missionaries John and Rachel are short on finances this month.  They had to sell their bicycles this week.  That was their main source of transportation.  Let’s all chip in together and get them back on their wheels!  I will be collecting this so contact me as soon as you can.  I’d like to get them their gift within the next 2 weeks.
+      </span>
+      <div class="time-stamp">
+        <div class="time">1 week</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Go ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+  <div class="tile-wpr give give-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter" data-twitter-handle="picozu_editor" data-picture="images/users/austin.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Austin S.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/couch.jpg">
+        <br/>
+        2 gently used couches.  I’d hate to throw these away or sell without seeing if anyone could use these couches!  I can help deliver them on my roomates truck if you need it.
+      </span>
+      <div class="time-stamp">
+        <div class="time">1 week</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic sten"></div>
+            <span>Sten D.</span>
+            <br/>
+            I think Rachel and Beth really need new furniture.  I'll ask them this tuesday.
+          </li>
+          <li>
+            <div class="comment-pic caleb"></div>
+            <span>Dakota M.</span>
+            <br/>
+            I'm interested too.  Let me know how it goes with Rachel and Beth.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Give ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+  <div class="tile-wpr need need-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/elaine.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Elaine B.</span> 
+      </div>
+    
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Lawn Maintenance.  I need help keeping up with my lawn.  My husband isn’t with me anymore and I’m not able to get out there and keep it tidy.  Any help would be greatly greatly appreciated.
+      </span>
+      <div class="time-stamp">
+        <div class="time">1 week</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic kate"></div>
+            <span>Kate W.</span>
+            <br/>
+            I just heard that my brother is looking to do some lawn maintenace.  I'll have him get a hold of you.
+          </li>
+          <li>
+            <div class="comment-pic chris"></div>
+            <span>Chris W.</span>
+            <br/>
+            I can help if this is still needed.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Need ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+<div class="tile-wpr grow grow-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/default.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Ryan A.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        "Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous person is powerful and effective." James 5:16
+      </span>
+      <div class="time-stamp">
+        <div class="time">1 week</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Grow ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+<div class="tile-wpr go go-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter" data-twitter-handle="picozu_editor" data-picture="images/users/ed.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Edwin A.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Our church is starting a prison ministry.  So far we have 5 volunteers.  Contact Ryan if this sounds like something God is calling you to!  We will meet 3 times a month.
+            </span>
+      <div class="time-stamp">
+        <div class="time">27 min</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic faso"></div>
+            <span>Michael L.</span>
+            <br/>
+            That sounds really cool. I'd like to learn more about this. I'll talk to my dad, he might be interested too.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Go ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+<div class="tile-wpr give give-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter" data-twitter-handle="picozu_editor" data-picture="images/users/elaine.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Elaine B.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/soup.jpg">
+        <br/>
+        We made too much chicken noodle soup tonight!  If you contact me within 2-3 days I’ll share a bowl!  Picture attached.
+            </span>
+      <div class="time-stamp">
+        <div class="time">1 week</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic melissa"></div>
+            <span>Melissa V.</span>
+            <br/>
+            Mmmmmm...  Maybe you could bring some to the Jordans.  Mr. Jordan is going through cancer treatment.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Give ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+ <div class="tile-wpr prayer prayer-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/naomi.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Naomi A.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Please Pray for my parents.  They are flying out to Romania today.  Pray for safe travels
+      </span>
+      <div class="time-stamp">
+        <div class="time">1 week</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Prayer ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+  <div class="tile-wpr need need-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/jay.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Jay J.</span> 
+      </div>
+    
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/sink.jpg">
+        <br/>
+        Broken Sink.  Does anyone in the church know a good plumber?  My sink is leaking rather profusely and I need some help soon.  I don't want to randomly check the yellow pages without checking here first.
+      </span>
+      <div class="time-stamp">
+        <div class="time">1 week</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic austin"></div>
+            <span>Austin S.</span>
+            <br/>
+            Do you know Jordan Smith?  He is a great plumber in our church.  His number is 561-5555.  I'd place a bucket under the sink and keep an eye on it.  You might need to turn your water off if you leave your house.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Need ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+<div class="tile-wpr give give-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter" data-twitter-handle="picozu_editor" data-picture="images/users/ana.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Ana B.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Free Haircuts!  I have a full haircut kit and I can do both mens and womens haircuts.  If you're financially tight, let me help out instead of paying an arm and a leg at the barber.
+            </span>
+      <div class="time-stamp">
+        <div class="time">2 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic austin"></div>
+            <span>Austin S.</span>
+            <br/>
+            This would be a great addition to our homeless outreach!  Contact me if you'd be interested in that!
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Give ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+ <div class="tile-wpr fellowship fellowship-sort isotope-item">
+    <div class="author">
+      <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/addison.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+      <span>Addison D.</span> 
+    </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/mountains.jpg">
+        <br/>
+        Camping trip to the Appalachian Mountains announced!  Contact Josh for more information and registration.  The cost is $150 for 4 nights.  On the trip, we will be doing a quick study on the book of Ephesians.
+      </span>
+      <div class="time-stamp">
+        <div class="time">2 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic kate"></div>
+            <span>Kate W.</span>
+            <br/>
+            I can't wait to see the mountains!!
+          </li>
+          <li>
+            <div class="comment-pic urbinati"></div>
+            <span>David U.</span>
+            <br/>
+            I wish I could make this trip.  I'll be in Guatemala for the entire month.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder=" Reply to Fellowship ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+<div class="tile-wpr go go-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/jay.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Jay J.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Our children’s ministry is starting a VBS program this summer.  You can learn more about our children’s outreaches on the church website.  This is a great outreach to the community!
+      </span>
+      <div class="time-stamp">
+        <div class="time">2 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic sten"></div>
+            <span>Sten D.</span>
+            <br/>
+            All right!  I can't wait to see those lil guys again!
+          </li>
+          <li>
+            <div class="comment-pic crystal"></div>
+            <span>Crystal Y.</span>
+            <br/>
+            AWESOME!!
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Go ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+<div class="tile-wpr grow grow-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/kate.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Kate W.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        "Daily Christian living is daily Christian dying." (Luke 9:23) - J. Piper
+      </span>
+      <div class="time-stamp">
+        <div class="time">2 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic addison"></div>
+            <span>Addison D.</span>
+            <br/>
+            Wow, well said.  So true.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Grow ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+  <div class="tile-wpr need need-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/sten.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Sten D.</span> 
+      </div>
+    
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        My sister needs a math tutor for 9th grade algebra.  She is really struggling and it’s so hard, I can’t seem to be of any help. Looking for any help!  Thanks!
+      </span>
+      <div class="time-stamp">
+        <div class="time">2 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic ken"></div>
+            <span>Ken B.</span>
+            <br/>
+            I'm a math teacher at First Baptist High School.  I have a free tutor session for students on weds & thurs at 5PM.  Your sister is welcome to join!  We meet in room 27C upstairs.  Contact me for more details.
+          </li>
+          <li>
+            <div class="comment-pic ben"></div>
+            <span>Ben H.</span>
+            <br/>
+            Wish I could help, but I'm slammed.
+          </li>
+          <li>
+            <div class="comment-pic sten"></div>
+            <span>Sten D.</span>
+            <br/>
+            Thanks so much!  We will see you then.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Need ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+<div class="tile-wpr prayer prayer-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/default.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Steve A.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        I’m struggling to keep pure eyes.  Pray that God would give me the strength to conquer my temptations daily.
+      </span>
+      <div class="time-stamp">
+        <div class="time">2 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic dakota"></div>
+            <span>Dakota M.</span>
+            <br/>
+            I'm praying for you!  Want to meet up and talk about this sometime soon?
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Prayer ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+<div class="tile-wpr give give-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter" data-twitter-handle="picozu_editor" data-picture="images/users/dave.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Dave M.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/books.jpg">
+        <br/>
+        10 theology books.  I have all of these great books sitting on my shelf.  They are really great books, but I’ve already read them all.  I’d love to share these with someone and help them grow!
+      </span>
+      <div class="time-stamp">
+        <div class="time">2 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Give ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+ <div class="tile-wpr prayer prayer-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/kate.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Kate W.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        I'm having a bad day.  Please pray that I would have patience and forgiveness.
+      </span>
+      <div class="time-stamp">
+        <div class="time">2 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Prayer ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+<div class="tile-wpr go go-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/default.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Andrei B.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+      I’m looking to start a Bible study at my work.  I could use some tips or suggestions to get this thing off the ground.  My company is mostly unbelievers.
+      </span>
+      <div class="time-stamp">
+        <div class="time">2 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic jake"></div>
+            <span>Jake D.</span>
+            <br/>
+            Let's meet up and talk!  I've been leading a group at my work for 3 years now.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Go ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+<div class="tile-wpr give give-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter" data-twitter-handle="picozu_editor" data-picture="images/users/jared.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Jared C.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/frige.jpg">
+        <br/>
+        Free used Frigidaire refrigerator.  We moved in to a new house that had an extra.  We don't have nearly enough popsicles to fill two frigerators!
+            </span>
+      <div class="time-stamp">
+        <div class="time">3 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic matt"></div>
+            <span>Matt V.</span>
+            <br/>
+            I could really use this, but I need a way to pick it up.
+          </li>
+          <li>
+            <div class="comment-pic dakota"></div>
+            <span>Daktoa M.</span>
+            <br/>
+            You should see if Ryan can help you pick it up!  He's got a huge pickup truck.
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Give ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+ <div class="tile-wpr fellowship fellowship-sort isotope-item">
+    <div class="author">
+      <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/willy.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+      <span>Willy V.</span> 
+    </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        We are going out to dinner tonight if anyone wants to join us!  We have a group coupon for 10% off.
+      </span>
+      <div class="time-stamp">
+        <div class="time">3 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic dakota"></div>
+            <span>Dakota M.</span>
+            <br/>
+            10% off to where?  We would love to join you!
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder=" Reply to Fellowship ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+<div class="tile-wpr prayer prayer-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/jared.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Jared C.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Urgent prayer need for my dad.  We are at the hospital right now.  He was just diagnosed with stage 3 lung cancer.  He is making some tough treatment choices.  We need your prayers.
+      </span>
+      <div class="time-stamp">
+        <div class="time">3 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic ben"></div>
+            <span>Ben H.</span>
+            <br/>
+            We are praying for you!!!
+          </li>
+          <li>
+            <div class="comment-pic ana"></div>
+            <span>Ana B.</span>
+            <br/>
+            We love your family and are praying for your father.  Call us if we can help make dinner or anything you need.
+          </li>
+          <li>
+            <div class="comment-pic india"></div>
+            <span>India L.</span>
+            <br/>
+            I will pray for him.  Let me know if you guys need anything.
+          </li>
+          <li>
+            <div class="comment-pic naomi"></div>
+            <span>Naomi A.</span>
+            <br/>
+            Praying for you guys!
+          </li>
+          <li>
+            <div class="comment-pic jake"></div>
+            <span>Jake D.</span>
+            <br/>
+            Oh WOW!  So sorry to hear this!  We will definetly pray that God will restore his health.  Love you guys!
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Prayer ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+  <div class="tile-wpr need need-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/luis.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Luis P.</span> 
+      </div>
+    
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        I have guests coming this weekend and I could use a blow-up mattress.  Either two twin size or one queen size.  Anything would be great!
+      </span>
+      <div class="time-stamp">
+        <div class="time">3 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Need ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+<div class="tile-wpr grow grow-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="twitter,facebook"  data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/anthony.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Anthony J.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        "My brethren, count it all joy when you fall into various trials, knowing that the testing of your faith produces patience. But let patience have its perfect work, that you may be perfect and complete, lacking nothing. If any of you lacks wisdom, let him ask of God, who gives to all liberally and without reproach, and it will be given to him." James 1:2-5
+      </span>
+      <div class="time-stamp">
+        <div class="time">3 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Grow ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+  <div class="tile-wpr go go-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/kate.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Kate W.</span> 
+      </div>
+    
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/india.jpg">
+        <br/>
+        If you are interested in the missions trip to India, you have 2 more weeks to register!  I know it’s early, but it takes a lot of time to raise support.  Contact me ASAP if you want to go!
+      </span>
+      <div class="time-stamp">
+        <div class="time">3 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Go ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+ <div class="tile-wpr fellowship fellowship-sort isotope-item">
+    <div class="author">
+      <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/gale.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+      <span>Gale A.</span> 
+    </div>  
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        <img src="images/photos/pool.jpg">
+        <br />
+        We just got a new pool but there's a problem wiht it.  There's nobody in it!  Come by and have a swim!
+      </span>
+      <div class="time-stamp">
+        <div class="time">3 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic naomi"></div>
+            <span>Naomi A.</span>
+            <br/>
+            That's so awesome!  We will definitely be coming by for a swim!
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder=" Reply to Fellowship ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+  <div class="tile-wpr fellowship fellowship-sort isotope-item">
+    <div class="author">
+      <span class="avatar classysocial" data-networks="email,twitter,facebook" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-facebook-handle="picozu" data-picture="images/users/urbinati.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+      <span>David U.</span> 
+    </div>  
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        We are going to the movies tonight!  Anyone want to join us?  Maybe coffee afterwards too?
+      </span>
+      <div class="time-stamp">
+        <div class="time">3 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic ben"></div>
+            <span>Ben H.</span>
+            <br/>
+            What are you going to see?
+          </li>
+          <li>
+            <div class="comment-pic anthony"></div>
+            <span>Anthony J.</span>
+            <br/>
+            We are interested in the coffee part, haha
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder=" Reply to Fellowship ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+    <div class="tile-wpr go go-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/crystal.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Crystal Y.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Photographer needed for the Haiti missions trip.  We need someone who’s great with a camera to document and raise awareness of our mission in Haiti.  Support is already raised for this position. Our planned volunteer had to back out for medical reasons.
+      </span>
+      <div class="time-stamp">
+        <div class="time">3 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+          <li>
+            <div class="comment-pic naomi"></div>
+            <span>Naomi A.</span>
+            <br/>
+            Oooh, that's an awesome opportunity!  I'm going to run it by Ben.  He's a great photographer.
+          </li>
+          <li>
+            <div class="comment-pic sten"></div>
+            <span>Sten D.</span>
+            <br/>
+            I'd love to go, but I'll have to work :(
+          </li>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Go ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+    <div class="tile-wpr prayer prayer-sort isotope-item">
+      <div class="author">
+        <span class="avatar classysocial" data-networks="email,twitter" data-email-handle="office@picozu.net" data-twitter-handle="picozu_editor" data-picture="images/users/matt.jpg" data-orientation="line" data-image-type="picture" data-arc-start="90" data-gap="40"></span>
+        <span>Matt V.</span> 
+      </div>
+    <div class="type-bar">
+    <div class="content">
+      <div class="type">
+      </div>
+      <span>
+        Prayer gathering this thursday night.  We will be meeting at the park.  Everyone is welcome.
+      </span>
+      <div class="time-stamp">
+        <div class="time">3 weeks</div><div class="flag"><a href="#">Flag</a></div>
+      </div>
+    </div>
+      <div class="comments">
+        <ul>
+        </ul>
+        <input type="text" rows="1" placeholder="Reply to Prayer ...">
+        </input>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+<!--End of Content Tiles DIV-->
+</div>
+
+
+    <!--Mobile Footer-->
+
+<div id="mobile-footer">
+<span id="new-post"><a title="Create a New Post" href="#"><li id="menu-new">New</li></a></span>
+			<span id="church-level"><a href="#" title="Select Church Level"><li id="menu-church">Caleb & Naomi's House Fellowship</li></a></span>
+</div>
+
+    <!--Slide out side nav JS script-->
+
+  <script>
+			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+				menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+				showRightPush = document.getElementById( 'showRightPush' ),
+				body = document.body;
+
+			showRightPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toleft' );
+				classie.toggle( menuRight, 'cbp-spmenu-open' );
+				disableOther( 'showRightPush' );
+			};
+		</script>
+
+
+</body>
+</html> 

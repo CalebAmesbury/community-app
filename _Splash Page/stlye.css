@@ -1,0 +1,205 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+p
+{font-family:'Kreon', arial, serif; color:#FFFFFF; font-size:18px;}
+
+
+body
+{margin:0px; background-color:#1B1B1F; Position:relative;}
+
+
+/* _________________________   HEADER   _____________________________ */
+
+
+#headerwrapper
+{background-image:url(images/headerbg.jpg); background-repeat:repeat-x; width:100%; height:421px;}
+
+#header
+{width:980px; height:421px; background: no-repeat; background-position:top center;	margin: 0px auto;	background-color: #333;	background-image: url(images/header.jpg);}
+
+#welcomebox
+{width: 424px; height:130px; font-family:'Kreon', arial, serif; color:#FFFFFF; font-size:28px; text-shadow:0px 2px #195687; line-height: 42px; letter-spacing: -0.1px; padding-top:193px; padding-left:32px;}
+
+#getinvolvedbutton
+{padding-left:206px; margin-top:-10px; outline: none;}
+
+#getinvolvedbutton img:hover
+{margin-top:3px; outline: none;}
+
+
+/* _________________________   BODY AREA   _____________________________ */
+
+#bodywrapper
+{background-image:url(images/bodybg.jpg); background-repeat:repeat-x; background-position:top center; background-color:#1B1B1F; }
+
+#bodyarea
+{width:980px; padding-top:57px;  padding-bottom: 10px;margin: 0 auto; }
+
+/* _________________________   FOOTER AREA   _____________________________ */
+
+#footerwrapper
+{background-image:url(images/footerbg.jpg); background-repeat:repeat; background-color:#333333; height: 1200px;}
+
+#footerarea
+{width: 980px; padding:30px; margin: 0 auto;}
+
+#getinvolvedheader
+{margin-top:-30px; text-align:center;}
+
+#getinvolvedheader img
+{padding-bottom:30px;}
+
+#resources
+{float:left; width:300px; height:275px;}
+
+.resourceitem
+{padding-top:20px; padding-right:20px; padding-bottom:20px; float:left;}
+
+.resourceitem:hover
+{padding-top:23px;}
+
+.followitem
+{padding:0 0 0 30px; float:left;}
+
+.followitem:hover 
+{padding-top:3px;}
+
+#followneedfeed
+{float:left; width: 300px; height: 275px;  margin-left: 30px;}
+
+#container
+{margin-top:19px;  border-radius: 20px;  background-color:#1D1D22; width:250px; height:80px; padding:15px; text-align:center;}
+
+#container form
+{padding-top:15px;}
+
+#donatefinancially
+{float:left; width: 300px; height: 240px; margin-left: 30px;}
+
+.donateitem
+{padding-top:12px;}
+
+.donateitem:hover
+{padding-top:15px;}
+
+/* _________________________   DONATE TIME FORM   _____________________________ */
+
+
+#donatetimeform
+{float:left; width: 432px; height: 240px; }
+
+#donatetimeform img
+{margin-bottom: 10px;}
+
+#donateform input{
+	padding: 8px 0 3px 12px;
+	width: 395px;
+	font-family: Kreon, Helvetica, sans-serif;
+	font-size: 20px;
+	margin-right:20px;
+	margin-top: 11px;
+	margin-bottom: 11px;
+	border: 2px solid #141418;
+	float:left;
+	background-color: #1D1D22;
+	color:#FFF;
+	border-radius: 10px;}
+	
+#donateform textarea {
+	padding: 8px 0 3px 12px;
+	width: 395px;
+	font-family: Kreon, Helvetica, sans-serif;
+	font-size: 18px;
+	border: 2px solid #141418;
+	float:left;
+	background-color: #1D1D22;
+	color:#FFF;	
+	overflow:auto;
+	border-radius: 10px;
+	margin-top: 10px;}
+	
+#donateform textarea {
+	height: 90px;}
+
+#donateform textarea:focus, #donateform input:focus {
+	border: 2px solid #000;}
+
+
+#donateform input.submit-button {	outline: none; cursor:pointer;  Border:none; width: 119px; height: 38px; float: right; background-image: url(images/submit.jpg); background-repeat: no-repeat; margin-top:15px; }
+
+#donateform input.submit-button:hover
+{margin-top:18px; outline: none;}
+
+#messagearea {overflow:auto;}
+
+
+
+/* _________________________   REQUEST FORM   _____________________________ */
+
+#requestform
+{float:left; width: 432px; height: 240px; margin-left: 100px;}
+
+#requestform img
+{margin-bottom: 10px;}
+
+
+#requestform input {
+	padding: 8px 0 3px 12px;
+	width: 395px;
+	font-family: Kreon, Helvetica, sans-serif;
+	font-size: 20px;
+	margin-right:20px;
+	margin-top: 11px;
+	margin-bottom: 11px;
+	border: 2px solid #141418;
+	float:left;
+	background-color: #1D1D22;
+	color:#FFF;
+	border-radius: 10px;}
+	
+#requestform textarea {
+	padding: 8px 0 3px 12px;
+	width: 395px;
+	font-family: Kreon, Helvetica, sans-serif;
+	font-size: 18px;
+	border: 2px solid #141418;
+	float:left;
+	background-color: #1D1D22;
+	color:#FFF;	
+	overflow:auto;
+	border-radius: 10px;
+	margin-top: 10px;}
+	
+#requestform textarea {
+	height: 90px;}
+
+#requestform textarea:focus, #requestform input:focus {
+	border: 2px solid #000;}
+	
+
+#requestform input.submit-button {	outline: none; cursor:pointer;  Border:none; width: 119px; height: 38px; float: right; background-image: url(images/submit.jpg); background-repeat: no-repeat; margin-top:15px; }
+
+#requestform input.submit-button:hover
+{margin-top:18px; outline: none;}
+
+#messagearea {overflow:auto;}
+
+
+/* _________________________   COPYRIGHT   _____________________________ */
+
+#copyright{  background-color: #1B1B1F; color: #555555; margin:0 auto;  height: 40px;  margin: auto;  padding-top: 20px;  width: 980px; font-size:16px; font-family: kreon,arial;}
+
+
+
+/* _________________________   EMAIL CONFIRMATION   _____________________________ */
+
+#emailconfirmationwpr
+{background-image:url(images/confirmationbg.jpg); background-repeat:repeat-x; width:100%; height:700px; background-color:#E3E3E3;}
+
+#confirmationblurb
+{margin: auto; padding-top: 60px; width: 765px;}
+
+#confirmationbackbutton:hover
+{padding-top: 3px;}

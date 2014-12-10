@@ -1,0 +1,203 @@
+    .header-wpr{
+    position: absolute;
+    top: -9999px;
+    visibility: hidden;
+    }
+
+    #mobile-footer{
+    position: absolute;
+    top: -9999px;
+    visibility: hidden;
+    }
+
+    .header-wpr-804 {
+        position: fixed;
+        top: 0;
+        height: 44px;
+        background-color: #919087;
+        width: 100%;
+        font: 700 15px/20px 'Open Sans', Arial, sans-serif;
+        color: #fff;
+        z-index: 999;
+        line-height: 44px;
+        display: inline;
+        visibility: visible;
+    }
+
+
+
+    .header-wpr-804 span.shadow{
+        position: fixed;
+        top:52px;
+        left: 0;
+        border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+
+    .header-wpr-804 a{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .header-wpr-804 a:hover{
+    }
+ 
+    .header-wpr-804 li{
+        float: left;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        height: 44px;
+    }
+
+    .header-wpr-804 li:hover{
+    }
+
+    #menu-new:before{
+        content: url(../images/new-icon.png);
+        vertical-align: middle;
+        margin-right: 7px;
+    }
+
+    #menu-new{
+        width: 20%;
+        font-weight: 400;
+        border-right: solid 1px #78786C;
+        height: 44px;
+        opacity: .7;
+    }
+
+    #menu-new:hover{
+        opacity: 1;
+    }
+
+    #menu-church{
+        width: 25%;
+        font-weight: 400;
+        border-right: solid 1px #78786C;
+        opacity: .7;
+        overflow: hidden;
+        font-size: 13px;
+        padding: 0 1%;
+    }
+
+    #menu-church:hover{
+        opacity: 1;
+    }
+
+    #menu-church:after{
+        content: url(../images/drop-down-arrow.png);
+        margin-left:5px;
+    }
+
+    #menu-all{
+        width: 24%;
+        border-right: solid 1px #78786C;
+        text-align: left;
+        padding: 0 2%;
+    }
+
+    #menu-all:after{
+        content: url(../images/drop-down-arrow.png);
+        margin-left:5px;
+        float: right;
+    }
+
+    #menu-all:hover{
+       background-color: #303030;
+    }
+     a.selected #menu-all{
+        background-color: #303030;
+    }
+    .header-wpr-804.menu-all-selected{
+        border-bottom: solid 8px #303030;
+    }
+    
+    #menu-notifications{
+        width: 8%;
+        height: 44px;
+        opacity: .7;
+    }
+
+    #menu-notifications:hover{
+        opacity: 1;
+    }
+
+    #menu-search{
+        width: 8%; 
+        height: 44px;
+    }
+    #menu-settings{
+        width: 8%; 
+        height: 44px;
+    }
+
+    #notifications-icon{
+        background-image: url(../images/profile-icon.jpg);
+        height: 22px;
+        width: 22px;
+        margin: auto;
+        margin-top: 11px;
+        border-radius: 12px;
+        position: relative;
+    }
+
+    #notifications-number{
+        background-color: #6B6B63;
+        border-radius: 3px 3px 3px 3px;
+        font: 700 13px 'open sans';
+        top: 12px;
+        left:12px;
+        padding: 0 5px;
+        position: absolute;
+    }
+
+    #search-icon{
+        background-image: url(../images/search-icon.png);
+        height: 20px;
+        width: 20px;
+        margin: auto;
+        margin-top: 13px;
+        opacity: .7;
+    }
+
+    li:hover #search-icon{
+        opacity: 1;
+    }
+
+    #menu-settings span{
+        background-image: url(../images/settings-icon.png);
+        height: 20px;
+        width: 20px;
+        margin: auto;
+        margin-top: 11px;
+        display: block;
+    }
+
+    button#showRightPush{
+        height: 44px;
+        width: 100%;
+        border:none;
+        cursor: pointer;
+        background: url(../images/settings-icon.png) no-repeat 50% 50%;
+        float: left;
+        opacity: .7;
+    }
+
+    button#showRightPush:hover{
+        opacity: 1;
+    }
+
+
+    select.ddmenu{    
+        background-color: #303030;
+        color: white;
+        padding: 13px;
+        float: left;
+        width:28%;
+        font-family:'Open Sans',​Arial,​sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+    }
+

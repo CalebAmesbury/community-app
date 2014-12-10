@@ -1,0 +1,101 @@
+/*!
+ * jQuery ClassySocial
+ * http://www.class.pm/projects/jquery/classysocial
+ *
+ * Written by Marius Stanciu - Sergiu <marius@picozu.com>
+ * Licensed under the GPL Version 3 license.
+ * Version 1.2.0
+ *
+ */
+
+
+
+.classysocial.bubble {
+    display: inline;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+    float: left;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.classysocial.bubble .main {
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 7;
+    z-index: 2;
+    cursor: pointer;
+}
+.classysocial.bubble .main img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 32px;
+}
+.classysocial.bubble .main:hover {
+}
+
+
+
+.classysocial.bubble .network_button {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    z-index: 1;
+    cursor: pointer;
+    text-indent: -9999px;
+    display: none;
+    background: no-repeat;
+}
+
+.classysocial.bubble .network_button {
+    margin-top: 35px;
+}
+
+
+.classysocial.bubble .network_button.facebook {
+    background: url(../images/bubble_facebook_share_button.png);
+}
+.classysocial.bubble .network_button.linkedin {
+    background: url(../images/bubble_linkedin_share_button.png);
+}
+.classysocial.bubble .network_button.google {
+    background: url(../images/bubble_googleplus_share_button.png);
+}
+.classysocial.bubble .network_button.twitter {
+    background: url(../images/bubble_twitter_share_button.png);
+}
+.classysocial.bubble .network_button.pinterest {
+    background: url(../images/bubble_pinterest_share_button.png);
+}
+.classysocial.bubble .network_button.dribbble {
+    background: url(../images/bubble_dribbble_share_button.png);
+}
+.classysocial.bubble .network_button.email {
+    background: url(../images/bubble_email_share_button.png);
+}
+.classysocial.bubble .network_button.instagram {
+    background: url(../images/bubble_instagram_share_button.png);
+}
+.classysocial.bubble .network_button.youtube {
+    background: url(../images/bubble_youtube_share_button.png);
+}
+.classysocial.bubble .network_button.vimeo {
+    background: url(../images/bubble_vimeo_share_button.png);
+}
+.classysocial.bubble .network_button.socl {
+    background: url(../images/bubble_socl_share_button.png);
+}
+.classysocial.bubble .network_button.github {
+    background: url(../images/bubble_github_share_button.png);
+}
+.classysocial.bubble .network_button:hover {
+    background-position: 0 -46px;
+}
